@@ -1,0 +1,300 @@
+/* Style umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.main-header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.form-section, .results-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.form-item {
+    margin: 10px 0;
+}
+
+/* Agar label gender jadi tombol bisa diklik */
+.gender-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    gap: 10px;
+  }
+  
+  .gender-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .gender-button input:checked + label {
+    background-color: #a0e0a0; /* Warna jika terpilih */
+  }
+  
+  .gender-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Sembunyikan input radio sebenarnya */
+  input[type="radio"].hidden {
+    display: none;
+  }
+  
+  /* Form Tengah dan Kecil */
+  .form-section {
+    width: 350px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-item {
+    margin: 10px 0;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  /* Tombol */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button[type="reset"] {
+    background-color: #f44336;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #e31c0b;
+  }
+  
+.gender-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Menyembunyikan hasil BMI sebelum form disubmit */
+#result-container {
+    display: none; /* Sembunyikan hasil sebelum tombol submit ditekan */
+    width: 100%;
+    height: 200px; /* Sesuaikan ukuran kotak */
+    margin-top: 20px;
+    border: 2px solid #000; /* Border untuk membedakan kotakan */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Styling untuk card atau hasil BMI */
+  .card {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2f2f2f;
+  }
+  
+  /* Deskripsi hasil BMI */
+  .result-description {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Menampilkan loading saat proses perhitungan */
+  #loading {
+    display: none; /* Sembunyikan loading sebelum perhitungan */
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+  }
+  
+  /* Styling untuk form ketika hasil sudah ditampilkan */
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Tampilan form input */
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  /* Styling untuk tombol */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button[type="reset"] {
+    background-color: #f44336;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #e31c0b;
+  }
+
+/* Footer Styling */
+.footer {
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* FAQ Icon Styling */
+.faq-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.faq-icon a {
+    display: block;
+}
+
+.faq-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.faq-icon:hover {
+    background-color: yellow; /* Warna saat hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section, .results-section {
+        width: 90%;
+    }
+    
+    .footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+}
+input [type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: lightcyan;
+    padding: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+
+.result-section {
+    padding: 16px;
+    text-align: center;
+    background-color: peachpuff;
+}
+
+#result-bmi {
+    font-size: xxx-large;
+    font-family: math;
+}
+
+/* CSS ini akan di terapkan ketika lebar layar lebih kecil dari 480px */
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+}
