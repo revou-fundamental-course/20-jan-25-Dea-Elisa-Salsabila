@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Website Title -->
+  <header class="main-header">
+    <h1>Kalkulator BMI</h1>
+    <!-- Introduction -->
+    <p class="description">
+      Berat badan mempengaruhi aktivitas sehari hari.
+    </p>
+  </header>
+
+    <main>
+     <!-- Container for Forms -->
+     <div class="content-container">
+        <!-- Form Section -->
+        <section id="form-section" class="form-section">
+            <form id="bmi-form" onsubmit="return validateForm()">
+              <div class="form-item">
+                <h3 for="gender">Jenis Kelamin</h3>
+                <div class="gender">
+                  <label for="male" class="gender-button">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/415/378/small_2x/gender-icon-symbols-male-sex-signs-illustration-png.png" alt="Pria" class="gender-icon" />
+                    <span>Pria</span>
+                  </label>
+                  <input type="radio" id="male" name="gender" value="male" required class="hidden" />
+          
+                  <label for="female" class="gender-button">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/350/162/small_2x/gender-icon-symbols-female-sex-signs-illustration-png.png" alt="Wanita" class="gender-icon" />
+                    <span>Wanita</span>
+                  </label>
+                  <input type="radio" id="female" name="gender" value="female" required class="hidden" />
+                </div>
+              </div>
+
+            <div class="form-item">
+                <h3 for="weight">Berat Badan (kg)</h3>
+                <input type="number" id="weight" name="weight" required />
+              </div>  
+
+            <div class="form-item">
+              <h3 for="age">Usia (tahun)</h3>
+              <input type="number" id="age" name="age" required />
+            </div>
+
+            <div class="form-item">
+              <h3 for="height">Tinggi Badan (cm)</h3>
+              <input type="number" id="height" name="height" required />
+            </div>
+
+            <div class="form-button-container">
+              <button type="submit">Hitung BMI</button>
+            
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </section>
+
+      <div class="results-container">
+        <!-- Results Section -->
+        <!-- Deskripsi tambahan -->
+        <div id="result-container" class="hidden">
+        <div id="result" class="card"></div>
+        <p id="description" class="result-description"></p>
+        </div>
+
+        <section id="results-section" class="results-section">
+          <h2>Hasil</h2>
+          <div id="loading" class="hidden">Menghitung...</div>
+        
+          <div id="result-container" class="hidden">
+            <div id="result" class="card"></div>
+            <div class="form-button-result">
+            </div>
+          </div>        
+        </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+<!-- Floating FAQ Icon -->
+  <div class="faq-icon">
+    <a href="#faq" aria-label="FAQ">
+        <img src="https://static-00.iconduck.com/assets.00/faq-icon-1024x1024-z4ncur0t.png" alt="FAQ Icon" />
+    </a>
+  </div>
+
+<!-- FAQ Modal -->
+<div id="faq-modal" class="faq-modal hidden">
+    <div class="faq-modal-content">
+      <span class="faq-close" id="faq-close">&times;</span>
+      <h2>FAQ</h2>
+      <p>Berikut adalah beberapa pertanyaan yang sering ditanyakan:</p>
+      <ul>
+        <li>1. Apa itu BMI?</li>
+        <li>2. Bagaimana cara menghitung BMI?</li>
+        <li>3. Apa yang harus dilakukan jika BMI tidak ideal?</li>
+      </ul>
+    </div>
+  </div>
+
+<footer class="footer">
+  <p>@2025 Kalkulator BMI Created By Dea<span id="current-year"></span></p>
+</footer>
+
+</html>
